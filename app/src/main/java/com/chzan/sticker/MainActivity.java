@@ -1,9 +1,13 @@
 package com.chzan.sticker;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+
+import com.chzan.sticker.flipper.SwitcherAndFlipActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,4 +26,7 @@ public class MainActivity extends AppCompatActivity {
         stickerView.addSticker(bitmap2);
     }
 
+    public void next(View view) {
+        startActivity(new Intent(this, SwitcherAndFlipActivity.class));
+    }
 }
